@@ -1,135 +1,243 @@
+/* About Section Base */
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px 170px;
-    gap: 80px;
+    background-color: #161513;
+    min-height: 100vh;
+    padding: 100px 0;
+    color: white;
 }
 
-.about-title {
-    text-align: center;
+/* Container Responsive Padding */
+.about .container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-.about-title h1 {
-    font-size: 80px;
-    font-weight: 600;
+/* Title Styling */
+.about h1 {
+    color: white;
+    font-size: clamp(3rem, 8vw, 6rem); /* Responsive font size */
 }
 
-.about-sections {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+/* Gradient Text Utility */
+.gradient-text {
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.68%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Image Container */
+.about-image-container {
+    max-width: 350px;
     width: 100%;
-    gap: 60px;
 }
 
-.about-left {
-    flex: 0 0 300px;
-    display: flex;
-    justify-content: center;
-}
-
-.about-left img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 20px;
+.about-image-container img {
     background-color: #2a2a2a;
     min-height: 400px;
+    object-fit: cover;
 }
 
-.about-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 600px;
-}
-
-.about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+/* Content Styling */
 .about-content p {
-    font-size: 18px;
-    line-height: 1.7;
     color: #d0d0d0;
     text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
-.about-skills {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
+/* Skills Section */
 .skill-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 15px;
-    border-radius: 10px;
+    background-color: rgba(42, 42, 42, 0.5);
     transition: 0.5s;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 
 .skill-item:hover {
     transform: scale(1.05);
-}
-
-.skill-item:hover .skill-progress {
-    transform: scaleY(3.5);
+    background-color: rgba(218, 124, 37, 0.1);
+    border-color: rgba(185, 35, 225, 0.3);
 }
 
 .skill-name {
-    font-size: 18px;
-    font-weight: 500;
     color: white;
 }
 
 .skill-bar {
-    width: 100%;
     height: 4px;
     background-color: #2a2a2a;
-    border-radius: 2px;
-    overflow: hidden;
 }
 
 .skill-progress {
     height: 100%;
     background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.68%);
-    border-radius: 2px;
     transition: width 1s ease-in-out, transform 0.5s;
 }
 
-.about-stats {
-    flex: 0 0 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
+.skill-item:hover .skill-progress {
+    transform: scaleY(1.5);
 }
 
-.stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
+/* Stats Section */
 .stat-number {
-    font-size: 60px;
-    font-weight: 700;
-    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.68%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     line-height: 1;
 }
 
 .stat-label {
-    font-size: 16px;
     color: #d0d0d0;
-    margin-top: 5px;
+}
+
+/* Responsive Design for Different Screen Sizes */
+
+/* Extra Large Screens (1200px and up) */
+@media (min-width: 1200px) {
+    .about .container-fluid {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    
+    .about-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large Screens (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .about {
+        padding: 80px 0;
+    }
+    
+    .about-image-container {
+        max-width: 300px;
+    }
+}
+
+/* Medium Screens (768px to 991px) */
+@media (max-width: 991px) {
+    .about {
+        padding: 60px 0;
+    }
+    
+    .about .container-fluid {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    
+    /* Stack image on top of content */
+    .about-image-container {
+        max-width: 280px;
+        margin-bottom: 2rem;
+    }
+    
+    .about-content {
+        text-align: center;
+    }
+    
+    .about-content p {
+        text-align: left;
+        font-size: 1rem;
+    }
+    
+    /* Stats in 2x2 grid on medium screens */
+    .about-stats .row {
+        justify-content: center;
+    }
+}
+
+/* Small Screens (576px to 767px) */
+@media (max-width: 767px) {
+    .about {
+        padding: 40px 0;
+    }
+    
+    .about .container-fluid {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    .about-image-container {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-image-container img {
+        min-height: 300px;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .skill-item {
+        padding: 1rem !important;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Extra Small Screens (less than 576px) */
+@media (max-width: 575px) {
+    .about {
+        padding: 30px 0;
+    }
+    
+    .about .container-fluid {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .about h1 {
+        font-size: 2.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .about-image-container {
+        max-width: 200px;
+    }
+    
+    .about-image-container img {
+        min-height: 250px;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .skill-item {
+        padding: 0.75rem !important;
+    }
+    
+    .skill-name {
+        font-size: 0.9rem !important;
+    }
+    
+    .stat-number {
+        font-size: 2rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .about {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .gradient-text {
+        color: #DA7C25 !important;
+        -webkit-text-fill-color: #DA7C25 !important;
+    }
+    
+    .skill-progress {
+        background: #DA7C25 !important;
+    }
 }

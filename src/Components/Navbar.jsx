@@ -1,7 +1,16 @@
 import React from "react"
 import "./Navbar.css"
+import {Link, useLocation} from "react-router-dom"
+import Projects from "./Projects/Project"
+import About from "./About/About"
+import Skills from "./Skills/Skills"
+
 
 const Navbar = () => {
+
+    const location = useLocation();
+
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary px-5 py-3">
             <div className="container-fluid">
@@ -12,16 +21,16 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse text-light" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active text-light" aria-current="page" href="#">Home</a>
+                            <Link className={`nav-link text-light ${location.pathname === "/" ? "active" : ""}`} to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active text-light" aria-current="page" href="#">Projects</a>
+                            <Link className={`nav-link text-light ${location.pathname === "/projects" ? "active" : ""}`} to="/projects">Projects</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active text-light" aria-current="page" href="#">Skills</a>
+                            <Link className={`nav-link text-light ${location.pathname === "/skills" ? "active" : ""}`} to="/skills">Skills</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active text-light" aria-current="page" href="#">About me</a>
+                            <Link className={`nav-link text-light ${location.pathname === "/about" ? "active" : ""}`} to="/about">About me</Link>
                         </li>
                     </ul>
                     <button className="btn btn-primary btn btn-outline-light" type="submit">Contact me</button>

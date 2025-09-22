@@ -21,6 +21,21 @@
     box-shadow: 0 5px 15px rgba(185, 35, 225, 0.3);
 }
 
+.nav-link.text-light.active {
+    background: linear-gradient(120deg, #DA7C25 0%, #B923E1 100%);
+    border-radius: 15px;
+    width: fit-content;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-link.text-light:hover {
+    border-radius: 8px;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
 .navbar-toggler:focus {
     box-shadow: none !important;
 }
