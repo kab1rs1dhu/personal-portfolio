@@ -102,5 +102,3 @@ This project is open source and available under the [MIT License](LICENSE).
 For any questions or collaboration opportunities, feel free to reach out!
 
 ---
-
-**Built with ❤️ using React and Vite**
