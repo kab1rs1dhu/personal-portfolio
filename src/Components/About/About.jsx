@@ -6,7 +6,6 @@ const About = () => {
   return (
     <div className='about'>
         <div className="container-fluid">
-            {/* Compact Title */}
             <div className="row justify-content-center mb-4">
                 <div className="col-12 text-center">
                     <h1 className="display-3 fw-bold mb-3">About Me</h1>
@@ -16,14 +15,11 @@ const About = () => {
             {/* Main Content */}
             <div className="row g-4 align-items-start">
                 
-                {/* Left Column - Image + Stats */}
                 <div className="col-lg-3 col-md-12">
-                    {/* Profile Image */}
                     <div className="about-image-container mb-4">
                         <img src={profileImage} alt="profileImage" className="img-fluid rounded-3" />
                     </div>
                     
-                    {/* Compact Stats */}
                     <div className="about-stats">
                         <div className="row g-2 text-center">
                             <div className="col-6 col-lg-12">
@@ -42,8 +38,8 @@ const About = () => {
                     </div>
                 </div>
 
-                {/* Middle Column - About Content */}
-                <div className="col-lg-5 col-md-12">
+
+                <div className="col-lg-5 col-md-12 my-5 ">
                     <div className="about-content">
                         <p className="fs-6 lh-base text-light mb-3">
                             Hi! I'm <strong className="text-white">Kabir Singh Sidhu</strong>, a 3rd year Computer Science student at 
@@ -58,118 +54,100 @@ const About = () => {
                         
                         <div className="contact-info mt-3">
                             <p className="fs-6 mb-2">
-                                <strong className="gradient-text">📧 Email:</strong> 
-                                <span className="text-light"> kabir@example.com</span>
+                                <strong className="gradient-text">📧 Email: </strong> 
+                                <span className="text-light">sidhukabir55@gmail.com</span>
                             </p>
                             <p className="fs-6 mb-2">
-                                <strong className="gradient-text">🎓 University:</strong> 
+                                <strong className="gradient-text">🎓 University: </strong> 
                                 <span className="text-light"> Simon Fraser University</span>
                             </p>
                             <p className="fs-6 mb-0">
-                                <strong className="gradient-text">📍 Location:</strong> 
+                                <strong className="gradient-text">📍 Location: </strong> 
                                 <span className="text-light"> Vancouver, BC</span>
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-12">
-                    
-                    {/* Programming Languages */}
-                    <div className="skill-section mb-4">
-                        <h4 className="fs-5 fw-semibold mb-3 gradient-text">💻 Languages</h4>
-                        <div className="row g-2">
-                            <div className="col-6">
-                                <div className="skill-badge">JavaScript</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Python</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">HTML/CSS</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Java</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">C++</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">SQL</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Frameworks & Libraries */}
-                    <div className="skill-section mb-4">
-                        <h4 className="fs-5 fw-semibold mb-3 gradient-text">🛠️ Frameworks</h4>
-                        <div className="row g-2">
-                            <div className="col-6">
-                                <div className="skill-badge">React</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Next.js</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Node.js</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Express</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Bootstrap</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Tailwind</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Tools & Technologies */}
-                    <div className="skill-section mb-4">
-                        <h4 className="fs-5 fw-semibold mb-3 gradient-text">⚡ Tools</h4>
-                        <div className="row g-2">
-                            <div className="col-6">
-                                <div className="skill-badge">Git</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">VS Code</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">MongoDB</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Firebase</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Figma</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge">Postman</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Currently Learning */}
-                    <div className="skill-section">
-                        <h4 className="fs-5 fw-semibold mb-3 gradient-text">📚 Learning</h4>
-                        <div className="row g-2">
-                            <div className="col-6">
-                                <div className="skill-badge learning">TypeScript</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge learning">Docker</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge learning">AWS</div>
-                            </div>
-                            <div className="col-6">
-                                <div className="skill-badge learning">GraphQL</div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div className="col-lg-5 col-md-6">
+                    <h2 className="display-6 fw-bold mb-3 gradient-text">My Interests</h2>
+                    <ul className="list-unstyled">
+                        <li className="fs-6 text-light-emphasis">🌐 Web Development</li>
+                        <li className="fs-6 text-light-emphasis">🎨 Graphic Design</li>
+                        <li className="fs-6 text-light-emphasis">📚 Learning New Technologies</li>
+                        <li className="fs-6 text-light-emphasis">⚽ Sports</li>
+                        <li className="fs-6 text-light-emphasis">🌍 Traveling</li>
+                    </ul>
                 </div>
+
+<div className="col-lg-5 col-md-6">
+    <div className="goals-section">
+        <h2 className="display-6 fw-bold mb-4 gradient-text">My Future Goals</h2>
+
+        <div className="primary-goal mb-4">
+            <div className="goal-item featured p-3 rounded-3">
+                <div className="goal-icon-large mb-2">🏢</div>
+                <h5 className="goal-title text-white mb-2">Build My Own Company</h5>
+                <p className="goal-description text-light-emphasis mb-0">
+                    Create innovative solutions that make a real difference in people's lives
+                    and solves real problems.
+                </p>
+            </div>
+        </div>
+
+
+        <div className="goals-grid">
+            <div className="row g-3">
+                <div className="col-md-6">
+                    <div className="goal-item p-3 rounded-3 h-100">
+                        <div className="goal-icon mb-2">🚀</div>
+                        <h6 className="goal-title text-white mb-1">Full-Stack Developer</h6>
+                        <p className="goal-description small text-light-emphasis mb-0">
+                            Master both frontend and backend technologies
+                        </p>
+                    </div>
+                </div>
+                
+                <div className="col-md-6">
+                    <div className="goal-item p-3 rounded-3 h-100">
+                        <div className="goal-icon mb-2">📈</div>
+                        <h6 className="goal-title text-white mb-1">Open Source Contributor</h6>
+                        <p className="goal-description small text-light-emphasis mb-0">
+                            Give back to the developer community
+                        </p>
+                    </div>
+                </div>
+                
+                <div className="col-md-6">
+                    <div className="goal-item p-3 rounded-3 h-100">
+                        <div className="goal-icon mb-2">🎓</div>
+                        <h6 className="goal-title text-white mb-1">Master's Degree</h6>
+                        <p className="goal-description small text-light-emphasis mb-0">
+                            Deepen my Computer Science knowledge
+                        </p>
+                    </div>
+                </div>
+                
+                <div className="col-md-6">
+                    <div className="goal-item p-3 rounded-3 h-100">
+                        <div className="goal-icon mb-2">🌍</div>
+                        <h6 className="goal-title text-white mb-1">Digital Nomad</h6>
+                        <p className="goal-description small text-light-emphasis mb-0">
+                            Work remotely while exploring the world
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Timeline Indicator */}
+        <div className="timeline-note mt-4 text-center">
+            <small className="text-light-emphasis">
+                <span className="gradient-text fw-semibold">2024-2030:</span> Turning dreams into reality, one step at a time
+            </small>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
