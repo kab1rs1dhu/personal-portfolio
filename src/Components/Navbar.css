@@ -5,3 +5,112 @@
     position: sticky;
     top: 20px;
 }
+
+/* Custom Navbar Toggler */
+.navbar-toggler {
+    border: none !important;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.68%);
+    transition: 0.5s;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(185, 35, 225, 0.3);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* Custom Toggler Icon */
+.navbar-toggler-icon {
+    width: 24px;
+    height: 18px;
+    background-image: none;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* Create custom hamburger lines */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 2px;
+}
+
+.navbar-toggler-icon::before {
+    top: 0;
+}
+
+.navbar-toggler-icon::after {
+    bottom: 0;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    height: 2px;
+    border-radius: 2px;
+}
+
+/* Animation when toggler is active */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+}
+
+/* Alternative: Gradient Border Style */
+.navbar-toggler-alt {
+    border: 2px solid transparent !important;
+    background: linear-gradient(#161513, #161513) padding-box,
+                linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.68%) border-box;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.5s;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-alt:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(185, 35, 225, 0.3);
+}
+
+/* Pulse animation option */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(185, 35, 225, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(185, 35, 225, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(185, 35, 225, 0);
+    }
+}
+
+.navbar-toggler-pulse {
+    animation: pulse 2s infinite;
+}
