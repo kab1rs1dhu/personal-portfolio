@@ -23,9 +23,7 @@ const Navbar = () => {
             <div className="container-fluid">
                 <a className="navbar-brand text-light fs-1" href="#">Portfolio</a>
                 
-                <div className="d-flex align-items-center">
-                    <button className="btn btn-primary btn btn-outline-light contact-always-visible me-3" type="submit">CONTACT ME</button>
-                    <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div className="d-flex align-items-center">                    <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
