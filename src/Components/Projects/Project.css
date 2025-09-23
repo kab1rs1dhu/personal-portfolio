@@ -275,9 +275,10 @@
 }
 
 .carousel-image {
+    width: 100%;
     height: 210px;
     object-fit: cover;
-    border-radius: 18px;
+    display: block;
 }
 
 /* Single Image Styling */
@@ -326,7 +327,7 @@
     opacity: 0.8;
 }
 
-/* Custom Carousel Controls */
+/* Reactstrap Carousel Controls */
 .project-carousel .carousel-control-prev,
 .project-carousel .carousel-control-next {
     background: linear-gradient(267deg, rgba(218, 124, 37, 0.8) 0.36%, rgba(185, 35, 225, 0.8) 102.68%);
@@ -336,6 +337,8 @@
     top: 50%;
     transform: translateY(-50%);
     transition: all 0.3s ease;
+    border: none;
+    opacity: 0.8;
 }
 
 .project-carousel .carousel-control-prev {
@@ -350,27 +353,30 @@
 .project-carousel .carousel-control-next:hover {
     background: linear-gradient(267deg, rgba(185, 35, 225, 0.9) 0.36%, rgba(218, 124, 37, 0.9) 102.68%);
     transform: translateY(-50%) scale(1.1);
+    opacity: 1;
 }
 
 .project-carousel .carousel-control-prev-icon,
 .project-carousel .carousel-control-next-icon {
     width: 20px;
     height: 20px;
+    background-size: 100%, 100%;
 }
 
-/* Custom Carousel Indicators */
+/* Reactstrap Carousel Indicators */
 .project-carousel .carousel-indicators {
     bottom: 10px;
     margin-bottom: 0;
 }
 
-.project-carousel .carousel-indicators [data-bs-target] {
+.project-carousel .carousel-indicators li {
     background-color: rgba(218, 124, 37, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.5);
     width: 12px;
     height: 12px;
     border-radius: 50%;
     transition: all 0.3s ease;
+    margin: 0 3px;
 }
 
 .project-carousel .carousel-indicators .active {
@@ -379,21 +385,46 @@
     transform: scale(1.2);
 }
 
-/* Custom Caption Styling */
-.custom-caption {
+/* Reactstrap Carousel Caption */
+.project-carousel .carousel-caption {
     background: linear-gradient(135deg, rgba(22, 21, 19, 0.8) 0%, rgba(42, 42, 42, 0.8) 100%);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     margin: 0 20px 20px 20px;
     padding: 10px 15px;
     bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
-.custom-caption p {
+.project-carousel .carousel-caption p {
     margin: 0;
     color: #d0d0d0;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+/* Reactstrap specific carousel inner */
+.project-carousel .carousel-inner {
+    border-radius: 18px;
+}
+
+.project-carousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Override Reactstrap's default styles */
+.project-carousel .carousel-item.active,
+.project-carousel .carousel-item-next,
+.project-carousel .carousel-item-prev {
+    display: block;
+}
+
+/* Dark theme for carousel */
+.project-carousel.carousel-dark .carousel-control-prev-icon,
+.project-carousel.carousel-dark .carousel-control-next-icon {
+    filter: none;
 }
 
 /* Responsive Design for Carousel */
@@ -429,12 +460,235 @@
         height: 16px;
     }
     
-    .custom-caption {
+    .project-carousel .carousel-caption {
         margin: 0 10px 10px 10px;
         padding: 8px 12px;
     }
     
-    .custom-caption p {
+    .project-carousel .carousel-caption p {
         font-size: 0.8rem;
+    }
+    
+    .project-carousel .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Add these styles to your Projectc.css file */
+
+/* Carousel Styling */
+.project-carousel {
+    max-width: 380px;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    border: 2px solid rgba(218, 124, 37, 0.3);
+}
+
+.project-carousel:hover {
+    border-color: rgba(185, 35, 225, 0.5);
+}
+
+.carousel-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Single Image Styling */
+.single-image {
+    max-width: 380px;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    border: 2px solid rgba(218, 124, 37, 0.3);
+}
+
+.single-image:hover {
+    transform: scale(1.05);
+    border-color: rgba(185, 35, 225, 0.5);
+}
+
+/* No Image Placeholder */
+.no-image-placeholder {
+    max-width: 380px;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(42, 42, 42, 0.8);
+    border: 2px dashed rgba(218, 124, 37, 0.5);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    color: #d0d0d0;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.no-image-placeholder p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Reactstrap Carousel Controls */
+.project-carousel .carousel-control-prev,
+.project-carousel .carousel-control-next {
+    background: linear-gradient(267deg, rgba(218, 124, 37, 0.8) 0.36%, rgba(185, 35, 225, 0.8) 102.68%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    border: none;
+    opacity: 0.8;
+}
+
+.project-carousel .carousel-control-prev {
+    left: 10px;
+}
+
+.project-carousel .carousel-control-next {
+    right: 10px;
+}
+
+.project-carousel .carousel-control-prev:hover,
+.project-carousel .carousel-control-next:hover {
+    background: linear-gradient(267deg, rgba(185, 35, 225, 0.9) 0.36%, rgba(218, 124, 37, 0.9) 102.68%);
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+.project-carousel .carousel-control-prev-icon,
+.project-carousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100%, 100%;
+}
+
+/* Reactstrap Carousel Indicators */
+.project-carousel .carousel-indicators {
+    bottom: 10px;
+    margin-bottom: 0;
+}
+
+.project-carousel .carousel-indicators li {
+    background-color: rgba(218, 124, 37, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin: 0 3px;
+}
+
+.project-carousel .carousel-indicators .active {
+    background-color: rgba(185, 35, 225, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+/* Reactstrap Carousel Caption */
+.project-carousel .carousel-caption {
+    background: linear-gradient(135deg, rgba(22, 21, 19, 0.8) 0%, rgba(42, 42, 42, 0.8) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 0 20px 20px 20px;
+    padding: 10px 15px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.project-carousel .carousel-caption p {
+    margin: 0;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Reactstrap specific carousel inner */
+.project-carousel .carousel-inner {
+    border-radius: 18px;
+}
+
+.project-carousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Override Reactstrap's default styles */
+.project-carousel .carousel-item.active,
+.project-carousel .carousel-item-next,
+.project-carousel .carousel-item-prev {
+    display: block;
+}
+
+/* Dark theme for carousel */
+.project-carousel.carousel-dark .carousel-control-prev-icon,
+.project-carousel.carousel-dark .carousel-control-next-icon {
+    filter: none;
+}
+
+/* Responsive Design for Carousel */
+@media (max-width: 768px) {
+    .project-carousel,
+    .single-image,
+    .no-image-placeholder {
+        max-width: 320px;
+        width: 90vw;
+    }
+    
+    .carousel-image {
+        height: 180px;
+    }
+    
+    .single-image {
+        height: 180px;
+    }
+    
+    .no-image-placeholder {
+        height: 180px;
+    }
+    
+    .project-carousel .carousel-control-prev,
+    .project-carousel .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .project-carousel .carousel-control-prev-icon,
+    .project-carousel .carousel-control-next-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .project-carousel .carousel-caption {
+        margin: 0 10px 10px 10px;
+        padding: 8px 12px;
+    }
+    
+    .project-carousel .carousel-caption p {
+        font-size: 0.8rem;
+    }
+    
+    .project-carousel .carousel-indicators li {
+        width: 10px;
+        height: 10px;
     }
 }

@@ -3,14 +3,8 @@ import "./Projects.css"
 import Project from "./Project"
 import rizzervitImage from "../../assets/rizzervit.png"
 import ctfGameImage from "../../assets/ctf.png"
-import chatServerImage from "../../assets/chat1.png"
-import chatClientImage from "../../assets/chat2.png"
+import chat1 from "../../assets/chat1.png"
 import learningAppImage1 from "../../assets/l1.png"
-import learningAppImage2 from "../../assets/l2.png"
-import learningAppImage3 from "../../assets/l3.png"
-import learningAppImage4 from "../../assets/l4.png"
-import learningAppImage5 from "../../assets/l5.png"
-
 
 
 const projectsData = [
@@ -58,8 +52,7 @@ const projectsData = [
 - Conducted extensive testing using telnet and custom protocol validators to ensure real-time performance and reliability.
 `,
     technologies: ["C", "TCP/IP Sockets", "Concurrency", "Pthreads", "Protocol Design"],
-    image: chatClientImage, 
-    image: chatServerImage,
+    image: chat1,
     github: "https://github.com/kab1rs1dhu/Group-Chat-Server",
     website: null
   },
@@ -76,10 +69,6 @@ const projectsData = [
 `,
     technologies: ["Kotlin", "Android", "Firebase", "Firestore", "UI/UX Design"],
     image: learningAppImage1,
-    image: learningAppImage2,
-    image: learningAppImage3,
-    image: learningAppImage4,
-    image: learningAppImage5,
     github: "https://github.com/your-username/learning-for-all", // Update with actual link
     website: null
   }
