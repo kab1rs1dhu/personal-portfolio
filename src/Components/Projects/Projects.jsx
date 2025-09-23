@@ -1,9 +1,16 @@
 import React from 'react'
-import "./Projectsc.css"
-// import rizzervitImage from "../../assets/rizzervit.png"
-// import ctfGameImage from "../../assets/ctf_game.png"
-// import chatServerImage from "../../assets/chat_server.png"
-// import learningAppImage from "../../assets/learning_app.png"
+import "./Projects.css"
+import Project from "./Project"
+import rizzervitImage from "../../assets/rizzervit.png"
+import ctfGameImage from "../../assets/ctf.png"
+import chatServerImage from "../../assets/chat1.png"
+import chatClientImage from "../../assets/chat2.png"
+import learningAppImage1 from "../../assets/l1.png"
+import learningAppImage2 from "../../assets/l2.png"
+import learningAppImage3 from "../../assets/l3.png"
+import learningAppImage4 from "../../assets/l4.png"
+import learningAppImage5 from "../../assets/l5.png"
+
 
 
 const projectsData = [
@@ -19,7 +26,7 @@ const projectsData = [
 - Developed comprehensive admin panel for content management and booking analytics, achieving 95% test coverage.
 `,
     technologies: ["Spring Boot", "Java", "PostgreSQL", "Thymeleaf", "BCrypt"],
-    //image: rizzervitImage,
+    image: rizzervitImage,
     github: "https://github.com/your-username/rizzervit", // Update with actual link
     website: null
   },
@@ -35,7 +42,7 @@ const projectsData = [
 - Managed development workflow and code reviews while contributing 60% of the total codebase.
 `,
     technologies: ["Java", "JavaFX", "Socket Programming", "TCP/IP", "Multithreading"],
-    //image: ctfGameImage,
+    image: ctfGameImage,
     github: "https://github.com/your-username/capture-the-flag", // Update with actual link
     website: null
   },
@@ -51,7 +58,8 @@ const projectsData = [
 - Conducted extensive testing using telnet and custom protocol validators to ensure real-time performance and reliability.
 `,
     technologies: ["C", "TCP/IP Sockets", "Concurrency", "Pthreads", "Protocol Design"],
-    //image: chatServerImage,
+    image: chatClientImage, 
+    image: chatServerImage,
     github: "https://github.com/kab1rs1dhu/Group-Chat-Server",
     website: null
   },
@@ -67,7 +75,11 @@ const projectsData = [
 - Built structured educational content with visual exercises and engaging interactive learning activities.
 `,
     technologies: ["Kotlin", "Android", "Firebase", "Firestore", "UI/UX Design"],
-    //image: learningAppImage,
+    image: learningAppImage1,
+    image: learningAppImage2,
+    image: learningAppImage3,
+    image: learningAppImage4,
+    image: learningAppImage5,
     github: "https://github.com/your-username/learning-for-all", // Update with actual link
     website: null
   }

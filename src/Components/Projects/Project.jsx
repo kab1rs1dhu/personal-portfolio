@@ -1,6 +1,6 @@
 import React from "react";
 import { marked } from "marked";
-import "./Projectc.css";
+import "./Project.css";
 
 const Project = ({ title, role, date, description, technologies = [], image, github, website }) => {
     return (
