@@ -3,6 +3,41 @@ import { marked } from "marked";
 import "./Project.css";
 
 const Project = ({ title, role, date, description, technologies = [], image, github, website }) => {
+
+    const isPhoneImage = (imageSrc) => {
+        if (!imageSrc) return false;
+        const phoneIndicators = ['l1', 'chat1'];
+        return phoneIndicators.some(indicator => imageSrc.includes(indicator));
+    };
+
+
+    const renderImageContent = () => {
+        // No image provided
+        if (!image) {
+            return (
+                <div className="no-image-placeholder">
+                    <div className="placeholder-icon">📸</div>
+                    <p>No images available</p>
+                </div>
+            );
+        }
+
+        // Detect if this is a phone image
+        const isPhone = isPhoneImage(image);
+
+        // Single image with natural aspect ratio
+        return (
+            <div className={`project-image-wrapper ${isPhone ? 'phone-image-wrapper' : ''}`}>
+                <img 
+                    src={image} 
+                    alt={`${title} screenshot`} 
+                    className={`project-image-natural ${isPhone ? 'phone-image' : 'web-image'}`}
+                />
+            </div>
+        );
+    };
+
+
     return (
         <div className="project-box">
         <h1 className="project-heading">{title}</h1>
@@ -13,7 +48,7 @@ const Project = ({ title, role, date, description, technologies = [], image, git
         </div>
         <div className="row project-content align-items-center">
             <div className="project-image-container col-lg-4 col-md-12 d-flex flex-column align-items-center">
-            {<img src={image} alt={`${title}-img`} className="project-image" />}
+            {renderImageContent()}
 
             <div className="project-links">
                 {github && ( <a href={github} target="_blank" rel="noopener noreferrer" className="btn-link-gt github">GitHub</a>)}
