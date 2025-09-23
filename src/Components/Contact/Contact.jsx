@@ -3,6 +3,7 @@ import './Contact.css'
 import githubLogo from "../../assets/github.png";
 import instagramLogo from "../../assets/instagram.png";
 import linkedinLogo from "../../assets/linkedin.png";
+import resume from "../../assets/Kabir_Singh_Sidhu_Resume.pdf";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,9 +35,8 @@ const Contact = () => {
   };
 
   const handleResumeDownload = () => {
-    const resumeUrl = '../../assets/Kabir_Singh_Sidhu_Resume.pdf';
     const link = document.createElement('a');
-    link.href = resumeUrl;
+    link.href = resume;
     link.download = 'Kabir_Singh_Sidhu_Resume.pdf';
     document.body.appendChild(link);
     link.click();
