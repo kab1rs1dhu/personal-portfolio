@@ -15,7 +15,7 @@ const closeNavbarGracefully = () => {
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary px-5 py-3">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary px-5 py-3 fixed-top">
             <div className="container-fluid">
                 <a className="navbar-brand text-light fs-1" href="#">Portfolio</a>
 
@@ -38,6 +38,9 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-light" to="/about">About me</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-light" to="/contact">Contact</Link>
                         </li>
                     </ul>
                 </div>
