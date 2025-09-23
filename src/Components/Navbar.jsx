@@ -31,20 +31,16 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse text-light" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className={`nav-link text-light ${location.pathname === "/" ? "active" : ""}`} to="/"
-                            onClick={closeNavbarGracefully}>Home</Link>
+                            <Link className="nav-link text-light"  to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link text-light ${location.pathname === "/projects" ? "active" : ""}`} to="/projects"
-                            onClick={closeNavbarGracefully}>Projects</Link>
+                            <Link className="nav-link text-light" to="/projects">Projects</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link text-light ${location.pathname === "/skills" ? "active" : ""}`} to="/skills"
-                            onClick={closeNavbarGracefully}>Skills</Link>
+                            <Link className="nav-link text-light" to="/skills">Skills</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link text-light ${location.pathname === "/about" ? "active" : ""}`} to="/about"
-                            onClick={closeNavbarGracefully}>About me</Link>
+                            <Link className="nav-link text-light" to="/about">About me</Link>
                         </li>
                     </ul>
                 </div>
