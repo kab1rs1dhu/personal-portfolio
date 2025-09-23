@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import './Contact.css'
+import githubLogo from "../../assets/github.png";
+import instagramLogo from "../../assets/instagram.png";
+import linkedinLogo from "../../assets/linkedin.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -114,7 +117,7 @@ const Contact = () => {
                     className="social-link"
                     title="GitHub"
                   >
-                    <img src="../../assets/github.png" alt="GitHub" className="social-icon" />
+                    <img src={githubLogo} alt="GitHub" className="social-icon" />
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/kab1rs1dhu/" 
@@ -123,7 +126,7 @@ const Contact = () => {
                     className="social-link"
                     title="LinkedIn"
                   >
-                    <img src="../../assets/linkedin.png" alt="LinkedIn" className="social-icon" />
+                    <img src={linkedinLogo} alt="LinkedIn" className="social-icon" />
                   </a>
                   <a 
                     href="https://www.instagram.com/kxbirsidhu/" 
@@ -132,7 +135,7 @@ const Contact = () => {
                     className="social-link"
                     title="Instagram"
                   >
-                    <img src="../../assets/instagram.png" alt="Instagram" className="social-icon" />
+                    <img src={instagramLogo} alt="Instagram" className="social-icon" />
                   </a>
                 </div>
               </div>
