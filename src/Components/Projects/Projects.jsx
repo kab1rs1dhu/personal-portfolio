@@ -74,11 +74,19 @@ const projectsData = [
   }
 ];
 
-const Projectsc = () => {
+const Projects = () => {
+  // Debug: Log all imported images
+  console.log('Imported images:', {
+    rizzervitImage,
+    ctfGameImage,
+    chat1,
+    learningAppImage1
+  });
+  
   return (
     <div className="project-page-container">
       <h1 className="heading">Featured Projects</h1>
-      <h2 className='about-subtitle baloo'>A showcase of my technical projects and development expertise</h2>
+      <h2 className='about-subtitle'>h2 heading</h2>
       {projectsData.map((project, index) => (
         <Project
           key={index}
@@ -96,4 +104,4 @@ const Projectsc = () => {
   );
 };
 
-export default Projectsc;
+export default Projects;
