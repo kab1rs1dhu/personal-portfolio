@@ -103,7 +103,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="row hero-content text-white align-items-center">
+        <div className="row hero-content text-white align-items-center mx-4 ">
           <div className="col-lg-6 col-sm-12 mb-4 mb-lg-0">
             <h1 className="hero-title mb-3" style={{ color: currentPalette.textColor }}>
               Hi, I'm <span 
