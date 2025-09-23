@@ -114,7 +114,7 @@ const Contact = () => {
                     className="social-link"
                     title="GitHub"
                   >
-                    <img src="/src/assets/github.png" alt="GitHub" className="social-icon" />
+                    <img src="../../assets/github.png" alt="GitHub" className="social-icon" />
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/kab1rs1dhu/" 
@@ -123,7 +123,7 @@ const Contact = () => {
                     className="social-link"
                     title="LinkedIn"
                   >
-                    <img src="/src/assets/linkedin.png" alt="LinkedIn" className="social-icon" />
+                    <img src="../../assets/linkedin.png" alt="LinkedIn" className="social-icon" />
                   </a>
                   <a 
                     href="https://www.instagram.com/kxbirsidhu/" 
@@ -132,7 +132,7 @@ const Contact = () => {
                     className="social-link"
                     title="Instagram"
                   >
-                    <img src="/src/assets/instagram.png" alt="Instagram" className="social-icon" />
+                    <img src="../../assets/instagram.png" alt="Instagram" className="social-icon" />
                   </a>
                 </div>
               </div>
