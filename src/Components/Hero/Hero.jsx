@@ -74,34 +74,6 @@ const Hero = () => {
    <section className="hero-section py-5" style={{ backgroundColor: currentPalette.background}}>
       <div className="container">
 
-        {/* Color Palette Selector */}
-        <div className="color-palette-container">
-          <div className="palette-label">
-            <span className="palette-text">🎨 Try Different Themes</span>
-          </div>
-          <div className="color-palette-grid">
-            {colorPalettes.map((palette, index) => (
-              <div
-                key={index}
-                className={`palette-item ${currentPalette.name === palette.name ? 'active' : ''}`}
-                onClick={() => changePalette(palette)}
-                title={palette.name}
-              >
-                <div 
-                  className="palette-color palette-bg" 
-                  style={{backgroundColor: palette.background}}
-                ></div>
-                <div 
-                  className="palette-color palette-gradient" 
-                  style={{
-                    background: `linear-gradient(45deg, ${palette.gradientStart}, ${palette.gradientEnd})`
-                  }}
-                ></div>
-                <div className="palette-name">{palette.name}</div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         <div className="row hero-content text-white align-items-center mx-4 ">
           <div className="col-lg-6 col-sm-12 mb-4 mb-lg-0">

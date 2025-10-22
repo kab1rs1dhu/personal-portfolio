@@ -1,13 +1,51 @@
 import React from 'react'
 import "./Projects.css"
 import Project from "./Project"
+import hirewiseImage from "../../assets/hirewise.png"
+import byteSyntaxImage from "../../assets/byte-syntax.png"
+import changeCaseImage from "../../assets/change-case.png"
 import rizzervitImage from "../../assets/rizzervit.png"
 import ctfGameImage from "../../assets/ctf.png"
 import chat1 from "../../assets/chat1.png"
-import learningAppImage1 from "../../assets/l1.png"
-
 
 const projectsData = [
+
+   {
+    title: "HireWise – AI Mock Interview Platform",
+    role: "Founder & Full Stack Developer",
+    date: "Jan 2025",
+    description: [
+      "Designed and shipped an AI-driven mock interview experience that pairs voice-based coaching with auto-generated question banks.",
+      "Built a Next.js 15 / React 19 front end with real-time Vapi voice sessions, custom UI components, and persistent interview transcripts.",
+      "Integrated Google Gemini via @ai-sdk/google to analyze transcripts and generate structured performance feedback stored in Firebase.",
+      "Implemented Firebase Auth + Firestore admin APIs for server actions, secure session cookies, and user-specific interview histories.",
+      "Automated interview creation flows with dynamic tech-stack normalization, randomized cover imagery, and role-specific question templates."
+    ],
+    technologies: ["Next.js 15", "React 19", "TypeScript", "Firebase", "Google Gemini", "Vapi"],
+    image: hirewiseImage,
+    github: "https://github.com/your-username/hirewise",
+    website: "https://hirewise.dev"
+  },
+
+
+  {
+  title: "Byte Syntax – Realtime Collaboration Hub",
+  role: "Founder & Full Stack Developer",
+  date: "2024",
+  description: [
+    "Designed a Stream Chat workspace with channel discovery, pinned messaging, and bespoke theming to keep distributed teams aligned.",
+    "Crafted a Clerk-authenticated onboarding flow featuring a Three.js particle hero, branded storytelling, and modal sign-in.",
+    "Launched Stream Video rooms with speaker layouts, shared presence, and toast-driven error handling that reuse chat identities.",
+    "Automated Clerk webhook ingestion via Inngest to upsert MongoDB profiles, mint Stream tokens, and auto-join discoverable channels.",
+    "Packaged the Vite SPA as an installable PWA layered with service-worker caching, Sentry observability, and React Query data fetching."
+  ],
+  technologies: ["Vite", "React 19", "JavaScript", "Express", "MongoDB", "Stream Chat", "Stream Video", "Clerk", "Inngest", "Sentry"],
+  image: byteSyntaxImage,
+  github: "https://github.com/your-username/bytesyntax",
+  website: "https://byte-syntax.vercel.app/"
+},
+
+
   {
     title: "RizzervIT - Event Booking Platform",
     role: "Team Leader & Full Stack Developer",
@@ -21,7 +59,7 @@ const projectsData = [
 `,
     technologies: ["Spring Boot", "Java", "PostgreSQL", "Thymeleaf", "BCrypt"],
     image: rizzervitImage,
-    github: "https://github.com/your-username/rizzervit", // Update with actual link
+    github: "https://github.com/kab1rs1dhu/rizzervit",
     website: null
   },
   {
@@ -37,9 +75,25 @@ const projectsData = [
 `,
     technologies: ["Java", "JavaFX", "Socket Programming", "TCP/IP", "Multithreading"],
     image: ctfGameImage,
-    github: "https://github.com/your-username/capture-the-flag", // Update with actual link
+    github: "https://github.com/DakshArora07/CaptureTheFlag-CMPT371",
     website: null
   },
+  {
+  title: "ChangeCase – VS Code Case Converter",
+  role: "Solo Developer",
+  date: "Oct 2024",
+  description: [
+    "Published a VS Code extension that instantly converts selected text across six naming conventions with both command palette entries and cross-platform keyboard shortcuts.",
+    "Built reusable, format-aware transformation utilities that preserve punctuation, multi-line selections, and mixed input while normalizing to the target case.",
+    "Integrated tightly with the VS Code Extension API to register commands, activation events, and editor-focused keybindings for a frictionless editing experience.",
+    "Authored Mocha-based unit tests with helper fixtures that validate every conversion path and guard against regressions when expanding the command set.",
+    "Automated linting and extension packaging via npm scripts, ESLint 9, and the VS Code Test CLI to keep the codebase reliable as features evolve."
+  ],
+    technologies: ["VS Code Extension API", "JavaScript", "Node.js", "Mocha", "ESLint"],
+    image: changeCaseImage,
+    github: "https://github.com/kab1rs1dhu/ChangeCase",
+    website: null
+},
   {
     title: "Group Chat Server",
     role: "Backend Developer",
@@ -53,36 +107,12 @@ const projectsData = [
 `,
     technologies: ["C", "TCP/IP Sockets", "Concurrency", "Pthreads", "Protocol Design"],
     image: chat1,
-    github: "https://github.com/kab1rs1dhu/Group-Chat-Server",
+    github: "",
     website: null
   },
-  {
-    title: "Learning for All - Educational App",
-    role: "Mobile Developer",
-    date: "Sep 2025", // Changed from 2025 to 2024
-    description: `
-- Created comprehensive educational Android application targeting elementary students (Class 1-5) with structured curriculum.
-- Integrated Firebase Authentication and Firestore database for secure user management and learning progress tracking.
-- Developed interactive learning modules covering mathematics, pattern recognition, and foundational academic concepts.
-- Designed intuitive child-friendly interface with progress visualization and seamless topic navigation features.
-- Built structured educational content with visual exercises and engaging interactive learning activities.
-`,
-    technologies: ["Kotlin", "Android", "Firebase", "Firestore", "UI/UX Design"],
-    image: learningAppImage1,
-    github: "https://github.com/your-username/learning-for-all", // Update with actual link
-    website: null
-  }
 ];
 
 const Projects = () => {
-  // Debug: Log all imported images
-  console.log('Imported images:', {
-    rizzervitImage,
-    ctfGameImage,
-    chat1,
-    learningAppImage1
-  });
-  
   return (
     <div className="project-page-container">
       <h1 className="heading">Featured Projects</h1>

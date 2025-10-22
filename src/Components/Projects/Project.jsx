@@ -4,6 +4,20 @@ import "./Project.css";
 
 const Project = ({ title, role, date, description, technologies = [], image, github, website }) => {
 
+    const toMarkdown = (content) => {
+        if (!content) return "";
+        if (Array.isArray(content)) {
+            return content
+                .map((item) => {
+                    const normalized = (item || "").trim();
+                    return normalized.startsWith("- ") ? normalized : `- ${normalized}`;
+                })
+                .join("\n");
+        }
+
+        return content;
+    };
+
     const isPhoneImage = (imageSrc) => {
         if (!imageSrc) return false;
         const phoneIndicators = ['l1', 'chat1'];
@@ -58,7 +72,7 @@ const Project = ({ title, role, date, description, technologies = [], image, git
             <div className="col-lg-8 col-md-12 col-sm-12 project-text">
             <div
             className="project-description mx-sm-4 mx-md-4"
-            dangerouslySetInnerHTML={{ __html: marked.parse(description || "") }}
+            dangerouslySetInnerHTML={{ __html: marked.parse(toMarkdown(description)) }}
             />
             <div className="tech-stack">
                 {technologies.map((tech, index) => (
